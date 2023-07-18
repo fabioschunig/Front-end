@@ -1,2 +1,2 @@
-# front-end
-Front-end
+# Front-end
+Front-end studies and tests
