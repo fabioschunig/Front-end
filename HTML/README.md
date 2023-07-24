@@ -1,2 +1,2 @@
 # HTML
-HTML code studies and snippets
+HTML studies and code snippets
