@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p><input type="number" id="ageToCheck" value="30"></p>
+
+    <button onclick="filterCheck()">Check age filter</button>
+
+    <p id="input-1"></p>
+    <p id="input-2"></p>
+</body>
+
+<script>
+    const ages = [32, 33, 12, 40];
+
+    function checkAge(age) {
+        return age > document.getElementById("ageToCheck").value;
+    }
+
+    function filterCheck() {
+        document.getElementById("input-1").innerHTML = ages;
+        document.getElementById("input-2").innerHTML = ages.filter(checkAge);
+    }
+</script>
+
+</html>
