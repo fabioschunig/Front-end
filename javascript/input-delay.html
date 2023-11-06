@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="input-search" onkeyup="searchText(this.value)">
+    <br>
+    <span id="search-text">Search text...</span>
+</body>
+
+<script>
+    let timeout = null;
+
+    function searchText(aSearchText) {
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function () {
+            console.log('Input Value:', aSearchText);
+
+            let espan = document.getElementById("search-text");
+            espan.innerHTML = aSearchText;
+        }, 1000);
+    }
+</script>
+
+</html>
