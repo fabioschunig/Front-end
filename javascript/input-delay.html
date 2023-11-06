@@ -6,9 +6,14 @@
     https://schier.co/blog/wait-for-user-to-stop-typing-using-javascript 
 -->
 
-
 <body>
-    <input type="text" id="input-search" onkeyup="searchText(this.value)">
+    <label>onkeyup:</label>
+    <br>
+    <input type="text" id="input-search-onkeyup" onkeyup="searchText(this.value)">
+    <br>
+    <label>oninput:</label>
+    <br>
+    <input type="text" id="input-search-oninput" oninput="searchText(this.value)">
     <br>
     <span id="search-text">Search text...</span>
 </body>
