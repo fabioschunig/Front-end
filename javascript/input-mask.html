@@ -73,11 +73,33 @@
             return num
         }
     </script>
+
+    <script>
+        // https://pt.stackoverflow.com/questions/290505/m%C3%A1scara-de-entrada-para-cpf-no-formul%C3%A1rio-html-sem-plugin
+
+        function mascara(i) {
+
+            var v = i.value;
+
+            if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que não seja número
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+
+            // 15/09/1984
+            i.setAttribute("maxlength", "10");
+            if (v.length == 2 || v.length == 5) i.value += "/";
+        }
+    </script>
 </head>
 
 <body>
 
     <input type="text" name="data" onkeydown="javascript: fMasc( this, mDataBR );">
+
+    <br>
+
+    <input oninput="mascara(this)" type="text">
 
 </body>
 
