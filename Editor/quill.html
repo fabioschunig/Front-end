@@ -87,7 +87,9 @@
 
         function getEditorContent() {
             let result = document.getElementById("result");
-            result.innerHTML = quill.container.innerHTML;
+            var delta = quill.getContents();
+            // result.innerHTML = quill.container.innerHTML;
+            result.innerHTML = JSON.stringify(delta);
         }
     </script>
 
